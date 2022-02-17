@@ -1,0 +1,10 @@
+{
+    "prospectMotorsURL": "",
+    "emailFrom": "",
+    "emailTo": "",
+    "password": "",
+    "port": 123,
+    "server": "",
+    "fileToSend": "cars.csv",
+    "oldCarsCsvFile": "cars_OLD.csv"
+}
