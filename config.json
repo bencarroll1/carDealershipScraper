@@ -1,9 +1,9 @@
 {
-    "prospectMotorsURL": "",
+    "url": "",
     "emailFrom": "",
     "emailTo": "",
     "password": "",
-    "port": 123,
+    "port": 587,
     "server": "",
     "fileToSend": "cars.csv",
     "oldCarsCsvFile": "cars_OLD.csv"

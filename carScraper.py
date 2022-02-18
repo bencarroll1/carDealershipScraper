@@ -17,7 +17,7 @@ from datetime import datetime
 with open("config.json", "r") as f:
     my_dict = json.load(f)
 
-prospectMotorsURL = my_dict["prospectMotorsURL"]
+prospectMotorsURL = my_dict["url"]
 prospectMotorsPage = requests.get(prospectMotorsURL)
 prospectMotorsSoup = BeautifulSoup(prospectMotorsPage.content,
                                    'html.parser')
@@ -117,7 +117,7 @@ if os.path.isfile('./' + fileToSend):
     os.rename(fileToSend, oldCarsCsvFile)
 
     export_data = zip_longest(fillvalue='', *cars_list)
-    with open('cars.csv', 'w', encoding='ISO-8859-1', newline='') as \
+    with open(fileToSend, 'w', encoding='ISO-8859-1', newline='') as \
             myfile:
         wr = csv.writer(myfile)
         wr.writerow((
@@ -162,7 +162,7 @@ if os.path.isfile('./' + fileToSend):
 else:
 
     export_data = zip_longest(fillvalue='', *cars_list)
-    with open('cars.csv', 'w', encoding='ISO-8859-1', newline='') as \
+    with open(fileToSend, 'w', encoding='ISO-8859-1', newline='') as \
             myfile:
         wr = csv.writer(myfile)
         wr.writerow((
